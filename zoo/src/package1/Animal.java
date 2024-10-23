@@ -6,8 +6,29 @@ public class Animal {
     // Attributes
     Date birth_Date;
     char sex;
+    String Diet;
     float weight;
     int animal_id;
+    String animal_name;
+
+    public String getAnimal_name() {
+        return animal_name;
+    }
+
+    public void setAnimal_name(String animal_name) {
+        this.animal_name = animal_name;
+    }
+
+
+    public String getDiet() {
+        return Diet;
+    }
+
+    public void setDiet(String diet) {
+        Diet = diet;
+    }
+
+
 
     public Date getBirth_Date() {
         return birth_Date;
@@ -55,9 +76,12 @@ public class Animal {
     }
 
     void info(){
-        System.out.println(birth_Date);
-        System.out.println(sex);
-        System.out.println(weight);
-        System.out.println(animal_id);
+        System.out.println(getAnimal_name());
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println(getSex());
+        System.out.println(getWeight());
+        System.out.println(getBirth_Date());
+        System.out.println(getAnimal_id());
+        System.out.println(getDiet());
     }
 }
