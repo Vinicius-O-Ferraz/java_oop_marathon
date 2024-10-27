@@ -63,8 +63,8 @@ public class App {
             else if (controller==2){
                 System.out.println("Reading animais");
                 for (Animal animal : animals) {
-                    animal.info(); // Imprime as informações do animal
-                    System.out.println(); // Linha em branco para separar os animais
+                    animal.info();
+                    System.out.println();
                 }
             }
 
