@@ -90,9 +90,6 @@ public class App {
                 }
             }
 
-            else if (controller==4){
-                System.out.println("Deleting animais");
-            }
         }
         sc.close();
         System.out.println("End of program");
@@ -104,7 +101,6 @@ public class App {
         System.out.println("1. Create Animal");
         System.out.println("2. Reading Animal");
         System.out.println("3. Updating Animal");
-        System.out.println("4. Deleting Animal");
         System.out.println("0. Exit");
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
