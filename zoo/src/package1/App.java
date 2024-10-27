@@ -1,21 +1,25 @@
 package package1;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Welcome to the Zoo!");
+        String[] nomes;
+/*        System.out.println("Welcome to the Zoo!");
 
-        Animal galinha = new Animal("Lion Alva",0,176.5f,"Carnivore", 'M',new Date());
-        galinha.info();
-        galinha.reproduce();
+        Animal lion = new Animal("Lion Alva",0,176.5f,"Carnivore", 'M',new Date());
+        lion.info();
+        lion.reproduce();*/
 
- /*       Vertebrate  vertebrate = new Vertebrate();
-        vertebrate.info();
-        vertebrate.setHabitat("Jungle");
-        vertebrate.setReproduction("oviparous");
-        System.out.println(vertebrate.getHabitat());
+        Animal[] animals = new Animal[100];
+        Scanner sc = new Scanner(System.in);
 
-        vertebrate.reproduce();*/
+        int controller = 1 ;
+        while(controller!=0){
+            controller = sc.nextInt();
+        }
+        System.out.println("End of program");
     }
 }
+
