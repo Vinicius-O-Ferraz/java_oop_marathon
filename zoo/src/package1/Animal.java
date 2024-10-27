@@ -167,12 +167,11 @@ public class Animal {
         if (!dayInput.isEmpty()) {
             int day = Integer.parseInt(dayInput);
             System.out.print("Month (current: " + (birth_Date.getMonth() + 1) + "): ");
-            int month = scanner.nextInt() - 1;  // Janeiro é 0 em Calendar
+            int month = scanner.nextInt() - 1;
             System.out.print("Year (current: " + (birth_Date.getYear() + 1900) + "): ");
             int year = scanner.nextInt();
             scanner.nextLine();  // Consumir a nova linha
 
-            // Atualizando a data de nascimento
             Calendar calendar = Calendar.getInstance();
             calendar.set(year, month, day);
             this.birth_Date = calendar.getTime();
