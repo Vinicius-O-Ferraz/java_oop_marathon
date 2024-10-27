@@ -1,6 +1,8 @@
 package package1;
 
 import java.util.Date;
+import java.util.Random;
+import java.util.stream.IntStream;
 
 public class Animal {
     // Attributes
@@ -8,7 +10,17 @@ public class Animal {
     private char sex;         // Stores the sex of the animal ('M' or 'F')
     private String Diet;      // Stores the diet type (e.g., herbivore, carnivore)
     private float weight;     // Stores the weight of the animal in kilograms
-    private int animal_id;    // Stores a unique identifier for the animal
+    final String animal_id;    // Stores a unique identifier for the animal
+
+    public Animal(String animal_name, int animal_id, float weight, String diet, char sex, Date birth_Date) {
+        this.animal_name = animal_name;
+        this.animal_id = generate_id();
+        this.weight = weight;
+        Diet = diet;
+        this.sex = sex;
+        this.birth_Date = birth_Date;
+    }
+
     private String animal_name;  // Stores the name of the animal
 
     // Getter method for animal_name
@@ -62,13 +74,8 @@ public class Animal {
     }
 
     // Getter method for animal_id
-    public int getAnimal_id() {
+    public String  getAnimal_id() {
         return animal_id;
-    }
-
-    // Setter method for animal_id
-    public void setAnimal_id(int animal_id) {
-        this.animal_id = animal_id;
     }
 
     // Methods
@@ -92,10 +99,17 @@ public class Animal {
         System.out.println("Reproducing");
     }
 
+    private String generate_id(){
+        Random generator = new Random();
+        StringBuilder id = new StringBuilder();
+        id.append(generator.nextInt());
+        return id.toString();
+    }
+
     // Displays the animal's information on the console
     void info() {
-        System.out.println(getAnimal_name());  // Prints the animal's name
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println(getAnimal_name());  // Prints the animal's name
         System.out.println(getSex());          // Prints the animal's sex
         System.out.println(getWeight());       // Prints the animal's weight
         System.out.println(getBirth_Date());   // Prints the animal's birth date
