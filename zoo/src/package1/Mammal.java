@@ -7,7 +7,7 @@ public class Mammal extends Vertebrate {
     private String furColor;          // Describes the color of the fur
     private boolean isWarmBlooded;    // Indicates if the mammal is warm-blooded
 
-    public Mammal(String animal_name, int animal_id, float weight, String diet, char sex, Date birth_Date, boolean hasSpinalCord, boolean hasJaw, String breathingType, String habitat, String reproduction, int numberOfMembers, String furColor, boolean isWarmBlooded) {
+    public Mammal(String animal_name, String animal_id, float weight, String diet, char sex, Date birth_Date, boolean hasSpinalCord, boolean hasJaw, String breathingType, String habitat, String reproduction, int numberOfMembers, String furColor, boolean isWarmBlooded) {
         super(animal_name, animal_id, weight, diet, sex, birth_Date, hasSpinalCord, hasJaw, breathingType, habitat, reproduction, numberOfMembers);
         this.furColor = furColor;
         this.isWarmBlooded = isWarmBlooded;

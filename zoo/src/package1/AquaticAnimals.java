@@ -8,7 +8,7 @@ public class AquaticAnimals extends Animal {
     // Construtor da classe filha
     public AquaticAnimals(
             String animal_name,
-            int animal_id,
+            String animal_id,
             float weight,
             String diet,
             char sex,

@@ -8,7 +8,7 @@ public class LandAnimals extends Invertebrate {
     // Construtor da classe filha
     public LandAnimals(
             String animal_name,
-            int animal_id,
+            String animal_id,
             float weight,
             String diet,
             char sex,

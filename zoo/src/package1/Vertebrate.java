@@ -11,7 +11,7 @@ public class Vertebrate extends Animal {
     private String reproduction;     // Describes the type of reproduction (e.g., oviparous, viviparous)
     private int numberOfMembers;     // Stores the number of body members (e.g., limbs)
 
-    public Vertebrate(String animal_name, int animal_id, float weight, String diet, char sex, Date birth_Date, boolean hasSpinalCord, boolean hasJaw, String breathingType, String habitat, String reproduction, int numberOfMembers) {
+    public Vertebrate(String animal_name, String animal_id, float weight, String diet, char sex, Date birth_Date, boolean hasSpinalCord, boolean hasJaw, String breathingType, String habitat, String reproduction, int numberOfMembers) {
         super(animal_name, animal_id, weight, diet, sex, birth_Date);
         this.hasSpinalCord = hasSpinalCord;
         this.hasJaw = hasJaw;

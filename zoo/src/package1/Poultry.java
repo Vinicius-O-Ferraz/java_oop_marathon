@@ -7,7 +7,7 @@ public class Poultry extends Vertebrate {
     private boolean canFly;            // Indicates if the poultry can fly
     private String featherColor;       // Describes the color of the feathers
 
-    public Poultry(String animal_name, int animal_id, float weight, String diet, char sex, Date birth_Date, boolean hasSpinalCord, boolean hasJaw, String breathingType, String habitat, String reproduction, int numberOfMembers, boolean canFly, String featherColor) {
+    public Poultry(String animal_name, String animal_id, float weight, String diet, char sex, Date birth_Date, boolean hasSpinalCord, boolean hasJaw, String breathingType, String habitat, String reproduction, int numberOfMembers, boolean canFly, String featherColor) {
         super(animal_name, animal_id, weight, diet, sex, birth_Date, hasSpinalCord, hasJaw, breathingType, habitat, reproduction, numberOfMembers);
         this.canFly = canFly;
         this.featherColor = featherColor;
