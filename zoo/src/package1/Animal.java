@@ -140,6 +140,45 @@ public class Animal {
         return new Animal(name, id, weight, diet, sex, birthDate);
     }
 
+    public void updateAnimal(Scanner scanner) {
+        System.out.println("Updating animal: " + animal_name);
+
+        System.out.println("Enter new weight (kg) or press Enter to keep current: ");
+        String weightInput = scanner.nextLine();
+        if (!weightInput.isEmpty()) {
+            this.weight = Float.parseFloat(weightInput);
+        }
+
+        System.out.println("Enter new diet or press Enter to keep current: ");
+        String dietInput = scanner.nextLine();
+        if (!dietInput.isEmpty()) {
+            this.Diet = dietInput;
+        }
+
+        System.out.println("Enter new sex (M/F) or press Enter to keep current: ");
+        String sexInput = scanner.nextLine();
+        if (!sexInput.isEmpty()) {
+            this.sex = sexInput.charAt(0);
+        }
+
+        System.out.println("Enter new birth date or press Enter to keep current:");
+        System.out.print("Day (current: " + (birth_Date.getDate()) + "): ");
+        String dayInput = scanner.nextLine();
+        if (!dayInput.isEmpty()) {
+            int day = Integer.parseInt(dayInput);
+            System.out.print("Month (current: " + (birth_Date.getMonth() + 1) + "): ");
+            int month = scanner.nextInt() - 1;  // Janeiro é 0 em Calendar
+            System.out.print("Year (current: " + (birth_Date.getYear() + 1900) + "): ");
+            int year = scanner.nextInt();
+            scanner.nextLine();  // Consumir a nova linha
+
+            // Atualizando a data de nascimento
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(year, month, day);
+            this.birth_Date = calendar.getTime();
+        }
+    }
+
     // Displays the animal's information on the console
     void info() {
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");

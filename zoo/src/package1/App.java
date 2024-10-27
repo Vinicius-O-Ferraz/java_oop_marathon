@@ -68,8 +68,28 @@ public class App {
                 }
             }
 
-            else if (controller==3){
+            else if (controller == 3) {
                 System.out.println("Updating animals");
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Enter the animal name which you want to update");
+                String name = scanner.nextLine();
+
+                boolean found = false; // Flag para verificar se o animal foi encontrado
+                for (Animal animal : animals) {
+                    if (animal.getAnimal_name().equals(name)) { // Corrigido para usar .equals
+                        System.out.println("Updating the following animal:");
+                        animal.info(); // Mostra as informações do animal a ser atualizado
+
+                        // Chama o método para atualizar o animal
+                        animal.updateAnimal(scanner);
+                        found = true;
+                        break; // Sai do loop após encontrar e atualizar
+                    }
+                }
+
+                if (!found) {
+                    System.out.println("Animal not found.");
+                }
             }
 
             else if (controller==4){
