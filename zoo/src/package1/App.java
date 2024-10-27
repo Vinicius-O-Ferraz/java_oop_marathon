@@ -15,7 +15,25 @@ public class App {
             controller = sc.nextInt();
 
             if (controller==1){
-                System.out.println("Creating animals");
+                menuCommand1();
+                int command = sc.nextInt();
+
+                if (command==0){controller = 0;}
+
+                else if (command==1){
+                    Animal animal = Animal.createAnimal(sc);
+                }
+
+                else if (command==2){}
+
+                else if (command==3){}
+
+                else if (command==4){}
+
+                else if (command==5){}
+
+                else if (command==6){}
+
             }
 
             else if (controller==2){
@@ -44,6 +62,21 @@ public class App {
         System.out.println("2. Reading Animal");
         System.out.println("3. Updating Animal");
         System.out.println("4. Deleting Animal");
+        System.out.println("0. Exit");
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+    }
+
+    public static void menuCommand1(){
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("To add the animal, first inform it's type");
+        System.out.println("1. Create Animal");
+        System.out.println("2. Create Vertebrate");
+        System.out.println("3. Create Invertebrate");
+        System.out.println("4. Create Mammal");
+        System.out.println("5. Create LandAnimals");
+        System.out.println("6. Create LandAnimals");
+        System.out.println("0. Exit");
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
     }

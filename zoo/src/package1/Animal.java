@@ -1,8 +1,9 @@
 package package1;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
-import java.util.stream.IntStream;
+import java.util.Scanner;
 
 public class Animal {
     // Attributes
@@ -10,9 +11,9 @@ public class Animal {
     private char sex;         // Stores the sex of the animal ('M' or 'F')
     private String Diet;      // Stores the diet type (e.g., herbivore, carnivore)
     private float weight;     // Stores the weight of the animal in kilograms
-    final String animal_id;    // Stores a unique identifier for the animal
+    static String animal_id;    // Stores a unique identifier for the animal
 
-    public Animal(String animal_name, int animal_id, float weight, String diet, char sex, Date birth_Date) {
+    public Animal(String animal_name, String animal_id, float weight, String diet, char sex, Date birth_Date) {
         this.animal_name = animal_name;
         this.animal_id = generate_id();
         this.weight = weight;
@@ -99,11 +100,43 @@ public class Animal {
         System.out.println("Reproducing");
     }
 
-    private String generate_id(){
+    private static String generate_id(){
         Random generator = new Random();
         StringBuilder id = new StringBuilder();
         id.append(generator.nextInt());
         return id.toString();
+    }
+
+    public static Animal createAnimal(Scanner scanner) {
+        System.out.print("Enter animal name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter animal weight (kg): ");
+        float weight = scanner.nextFloat();
+        scanner.nextLine();  // Consumir a nova linha
+
+        System.out.print("Enter animal diet (e.g., Herbivore, Carnivore): ");
+        String diet = scanner.nextLine();
+
+        System.out.print("Enter animal sex (M/F): ");
+        char sex = scanner.nextLine().charAt(0);
+
+        System.out.println("Enter birth date:");
+        System.out.print("Day: ");
+        int day = scanner.nextInt();
+        System.out.print("Month: ");
+        int month = scanner.nextInt() - 1;  // Janeiro é 0 em Calendar
+        System.out.print("Year: ");
+        int year = scanner.nextInt();
+        scanner.nextLine();  // Consumir a nova linha
+
+        // Criando a data de nascimento
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+        Date birthDate = calendar.getTime();
+
+        // Criação e retorno do objeto Animal
+        return new Animal(name, animal_id = generate_id(), weight, diet, sex, birthDate);
     }
 
     // Displays the animal's information on the console
