@@ -11,11 +11,12 @@ public class Animal {
     private char sex;         // Stores the sex of the animal ('M' or 'F')
     private String Diet;      // Stores the diet type (e.g., herbivore, carnivore)
     private float weight;     // Stores the weight of the animal in kilograms
-    static String animal_id;    // Stores a unique identifier for the animal
+    public static String animal_id;    // Stores a unique identifier for the animal
+    private static int currentId = 0;
 
     public Animal(String animal_name, String animal_id, float weight, String diet, char sex, Date birth_Date) {
         this.animal_name = animal_name;
-        this.animal_id = generate_id();
+        this.animal_id = animal_id;
         this.weight = weight;
         Diet = diet;
         this.sex = sex;
@@ -101,10 +102,8 @@ public class Animal {
     }
 
     private static String generate_id(){
-        Random generator = new Random();
-        StringBuilder id = new StringBuilder();
-        id.append(generator.nextInt());
-        return id.toString();
+        currentId++;
+        return String.valueOf(currentId);
     }
 
     public static Animal createAnimal(Scanner scanner) {
@@ -148,7 +147,7 @@ public class Animal {
         System.out.println(getSex());          // Prints the animal's sex
         System.out.println(getWeight());       // Prints the animal's weight
         System.out.println(getBirth_Date());   // Prints the animal's birth date
-        System.out.println(getAnimal_id());    // Prints the animal's ID
+        System.out.println(animal_id);    // Prints the animal's ID
         System.out.println(getDiet());         // Prints the animal's diet
     }
 }
