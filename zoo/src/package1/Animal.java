@@ -108,18 +108,18 @@ public class Animal {
     }
 
     public static Animal createAnimal(Scanner scanner) {
-        System.out.print("Enter animal name: ");
-        String name = scanner.nextLine();
+        System.out.println("Enter animal name: ");
+        String name = scanner.nextLine(); // Captura o nome
 
-        System.out.print("Enter animal weight (kg): ");
+        System.out.println("Enter animal weight (kg): ");
         float weight = scanner.nextFloat();
         scanner.nextLine();  // Consumir a nova linha
 
-        System.out.print("Enter animal diet (e.g., Herbivore, Carnivore): ");
-        String diet = scanner.nextLine();
+        System.out.println("Enter animal diet (e.g., Herbivore, Carnivore): ");
+        String diet = scanner.nextLine(); // Captura a dieta
 
-        System.out.print("Enter animal sex (M/F): ");
-        char sex = scanner.nextLine().charAt(0);
+        System.out.println("Enter animal sex (M/F): ");
+        char sex = scanner.nextLine().charAt(0); // Captura o sexo
 
         System.out.println("Enter birth date:");
         System.out.print("Day: ");
@@ -136,7 +136,9 @@ public class Animal {
         Date birthDate = calendar.getTime();
 
         // Criação e retorno do objeto Animal
-        return new Animal(name, animal_id = generate_id(), weight, diet, sex, birthDate);
+
+        String id = generate_id();
+        return new Animal(name, id, weight, diet, sex, birthDate);
     }
 
     // Displays the animal's information on the console

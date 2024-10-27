@@ -1,12 +1,14 @@
 package package1;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Animal[] animals = new Animal[100];
+        List<Animal> animals = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
         int controller = 1 ;
@@ -21,25 +23,48 @@ public class App {
                 if (command==0){controller = 0;}
 
                 else if (command==1){
-                    Animal animal = Animal.createAnimal(sc);
+                    Scanner scanner = new Scanner(System.in);
+                    Animal animal = Animal.createAnimal(scanner);
+                    animals.add(animal);
                 }
 
-                else if (command==2){}
+                else if (command==2){
+                    Scanner scanner = new Scanner(System.in);
+                    Animal animal = Animal.createAnimal(scanner);
+                    animals.add(animal);
+                }
 
-                else if (command==3){}
+                else if (command==3){
+                    Scanner scanner = new Scanner(System.in);
+                    Animal animal = Animal.createAnimal(scanner);
+                    animals.add(animal);
+                }
 
-                else if (command==4){}
+                else if (command==4){
+                    Scanner scanner = new Scanner(System.in);
+                    Animal animal = Animal.createAnimal(scanner);
+                    animals.add(animal);
+                }
 
-                else if (command==5){}
+                else if (command==5){
+                    Scanner scanner = new Scanner(System.in);
+                    Animal animal = Animal.createAnimal(scanner);
+                    animals.add(animal);
+                }
 
-                else if (command==6){}
+                else if (command==6){
+                    Scanner scanner = new Scanner(System.in);
+                    Animal animal = Animal.createAnimal(scanner);
+                    animals.add(animal);
+                }
 
             }
 
             else if (controller==2){
                 System.out.println("Reading animais");
-                for (int i = 0; i < animals.length; i++) {
-                    System.out.println(animals[i]);
+                for (Animal animal : animals) {
+                    animal.info(); // Imprime as informações do animal
+                    System.out.println(); // Linha em branco para separar os animais
                 }
             }
 
