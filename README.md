@@ -60,6 +60,18 @@ In a nutshell, OOP provides the foundation for structuring software using classe
 The first project in this repository is a simple implementation of what we have learned so far. The context of this implementation revolves around Jack, a veterinarian at the zoo. He discusses with his brother, Michael, a computer scientist, the idea of creating a system to map all the animals in the zoo. In the future, Michael plans to develop an infrared system to access a database containing animal information through his smartphone.
 
 Michael returned with this class diagram to represent the attributes to be studied in the application. The diagram can be seen it in the image bellow:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/28a56cea-5cc3-48bc-b606-10a88f7b5708" alt="image">
+  <small>Class diagram of the Zoo implementation</small>
+</p>
 
-![Diagrama em branco](https://github.com/user-attachments/assets/3b0261ab-f7ef-4bf6-9da0-6a4ed102eac9)
+# Menu of the implementation
+
+After the implementation of the Zoo Class Diagram, I've implemented a terminal-based interface. In that interface, you can create, update, and read records seamlessly. As you can see it in the figure bellow.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3a9cb2e9-a606-476e-afff-8352866af10b" alt="image">
+  <br>
+  <small>Menu of the CRUD of the Zoo implementation</small>
+</p>
 
